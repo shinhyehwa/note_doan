@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NoteBook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="queryHint">Nội dung ghi chú</string>
+    <string name="note_time">6 tháng 6, 7:40</string>
+</resources>

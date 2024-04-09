@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newNotes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".View.NewNotes.NewNotesFragment">
+
+    <!-- bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/NewNotes_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/NewNotes_scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/NewNotes_arrow_back"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="TODO"
+            android:src="@drawable/arrow_small_left_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/madimione"
+            android:gravity="center"
+            android:text="Create New"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/NewNotes_save"
+            app:layout_constraintStart_toEndOf="@+id/NewNotes_arrow_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/NewNotes_save"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="TODO"
+            android:src="@drawable/floppy_disks_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/NewNotes_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewNotes_bar">
+            <LinearLayout
+                android:id="@+id/NewNotes_body"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+
+                <EditText
+                    android:id="@+id/NewNotes_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:hint="Tiêu Đề"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/NewNotes_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/note_time" />
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/NewNotes_cardImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/NewNotes_image"
+                        android:layout_width="180dp"
+                        android:layout_height="230dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/noitem"
+                        />
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/rounded_corners_16"
+                        android:src="@drawable/baseline_delete_outline_24" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/NewNotes_cardAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:padding="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Audio" />
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/NewNotes_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:hint="Nhập Nội Dung"
+                    android:textSize="20sp" />
+            </LinearLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/new_note_card_tool"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:backgroundTint="#DDF3F7"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/NewNotes_colors"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/makeup_brush_24" />
+
+            <ImageButton
+                android:id="@+id/NewNotes_picture"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/picture_24" />
+
+            <ImageButton
+                android:id="@+id/NewNotes_audio"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/microphone_24" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
