@@ -28,4 +28,9 @@ interface DaoNotes {
     //update data
     @Update
     fun updateNote(item: Notes)
+
+    // search note by dateCreate
+    @Query("SELECT * FROM Notes WHERE dateCreate >= :selectedDateWithZeroTime AND dateCreate < :nextDayWithZeroTime")
+    fun getNotesByDate(selectedDateWithZeroTime: Long, nextDayWithZeroTime: Long): List<Notes>
+
 }

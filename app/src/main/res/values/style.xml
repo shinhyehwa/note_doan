@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Định nghĩa CustomDateTextAppearance -->
+    <style name="CustomDateTextAppearance">
+        <item name="android:textColor">#FF0000</item> <!-- Màu đỏ -->
+        <item name="android:textStyle">bold</item> <!-- In đậm -->
+        <!-- Thêm các thuộc tính văn bản khác tùy theo yêu cầu của bạn -->
+    </style>
+
+    <color name="red">#FF0000</color>
+</resources>

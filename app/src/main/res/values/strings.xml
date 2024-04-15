@@ -4,4 +4,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="queryHint">Nội dung ghi chú</string>
     <string name="note_time">6 tháng 6, 7:40</string>
+    <string name="no_login">Bạn cần đăng nhập để thực hiện chức năng này!</string>
+    <string name="login">Đăng nhập</string>
+    <string name="login_google">Đăng nhập bằng Google</string>
+    <string name="register">Đăng ký</string>
+    <string name="email">Gmail</string>
+    <string name="password">Password</string>
+    <string name="pass">Confirm Password</string>
+
+    <string name="validateEmail">email đã tồn tại hoặc sai</string>
+    <string name="validatePass">mật khẩu có độ dài 6-16 ký tự và không được gồm 1 số một chữ thường, một chữ hoa và 1 ký tự đặc biệt</string>
+    <string name="validateConfirmPass">Mật khẩu không khớp</string>
 </resources>

@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.splash_screen.Model.Notes.Notes
 import com.example.splash_screen.Model.Notes.NotesDatabase
-import java.lang.Exception
+import kotlin.Exception
 
 class NoteRepository(private val db: NotesDatabase){
     private var notesDatabase: NotesDatabase = db
@@ -47,6 +47,14 @@ class NoteRepository(private val db: NotesDatabase){
             notesDatabase.noteDatabase().insertNote(data)
         }catch (e: Exception){
             Log.e("insert notes: ", e.toString())
+        }
+    }
+
+    fun searchNoteByDateCreate(selectDay: Long,nextDay: Long): List<Notes>{
+        return try {
+            notesDatabase.noteDatabase().getNotesByDate(selectDay, nextDay)
+        }catch (e: Exception){
+            emptyList()
         }
     }
 }
