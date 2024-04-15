@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.splash_screen.Model.Notes.Notes
 import com.example.splash_screen.R
 import com.example.splash_screen.View.NewNotes.NewNotesFragment
@@ -88,7 +89,7 @@ class FragmentNotes : Fragment() {
         })
 
         adapterNotes = AdapterNotes(listNotes, requireActivity().application)
-        recyclerView.layoutManager = GridLayoutManager(context, 2)
+        recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.adapter = adapterNotes
         //listener
         settingListener()
