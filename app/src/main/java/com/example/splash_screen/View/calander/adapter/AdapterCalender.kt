@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.splash_screen.Model.Notes.Notes
+import com.example.splash_screen.model.Notes.Notes
 import com.example.splash_screen.R
 import com.example.splash_screen.constans.byteArrayToBitmap
 import com.example.splash_screen.constans.showTimeToNewNote

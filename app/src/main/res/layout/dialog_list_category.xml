@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/choose_cate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/madimione"
+            android:gravity="center_horizontal"
+            android:text="@string/choose_category"
+            android:textColor="@color/joust_blur"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/choose_cate_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/madimione"
+            android:text="@string/save"
+            android:textColor="@color/joust_blur" />
+
+        <Button
+            android:id="@+id/choose_cate_create_cate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/madimione"
+            android:text="@string/new_cate"
+            android:textColor="@color/joust_blur" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/choose_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose_cate_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="@color/joust_blur"
+            android:textSize="16sp"
+            android:text="All"
+            android:fontFamily="@font/madimione"
+            app:drawableStartCompat="@drawable/baseline_reorder_24"
+            android:drawablePadding="8dp"/>
+
+        <CheckBox
+            android:id="@+id/category_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/choose_cate_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/choose_all"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

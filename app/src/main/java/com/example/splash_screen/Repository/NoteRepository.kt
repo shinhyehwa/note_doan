@@ -3,9 +3,8 @@ package com.example.splash_screen.Repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.splash_screen.Model.Notes.Notes
-import com.example.splash_screen.Model.Notes.NotesDatabase
-import kotlin.Exception
+import com.example.splash_screen.model.Notes.Notes
+import com.example.splash_screen.model.Notes.NotesDatabase
 
 class NoteRepository(private val db: NotesDatabase){
     private var notesDatabase: NotesDatabase = db
@@ -20,13 +19,23 @@ class NoteRepository(private val db: NotesDatabase){
         }
     }
 
-    fun getNoteById(ID: Int): LiveData<Notes> {
+    fun getNoteById(ID: Int): Notes? {
         return try {
             val items = notesDatabase.noteDatabase().getNoteById(ID)
             items
-        }catch (e: Exception){
+        } catch (e: Exception) {
             Log.e("get all notes:", e.toString())
-            MutableLiveData<Notes>().apply { value = null }
+            null
+        }
+    }
+
+    fun getNotesByIdCate(idCate: Int): List<Notes> {
+        return try {
+            val items = notesDatabase.noteDatabase().getNoteByIdCate(idCate)
+            items
+        } catch (e: Exception) {
+            Log.e("error get notes by IdCate", e.toString())
+            emptyList()
         }
     }
 
@@ -37,7 +46,7 @@ class NoteRepository(private val db: NotesDatabase){
     fun deleteNote(data: Notes) {
         try {
             notesDatabase.noteDatabase().deleteNote(data)
-        } catch (e: Exception){
+        } catch (e: Exception) {
             Log.e("delete notes: ", e.toString())
         }
     }
@@ -50,11 +59,36 @@ class NoteRepository(private val db: NotesDatabase){
         }
     }
 
-    fun searchNoteByDateCreate(selectDay: Long,nextDay: Long): List<Notes>{
+    fun insertAllNote(data: List<Notes>) {
+        try {
+            notesDatabase.noteDatabase().insertAllNotes(data)
+        }catch (e: Exception){
+            Log.e("insert notes: ", e.toString())
+        }
+    }
+
+    fun deleteAllNotes(){
+        try {
+            notesDatabase.noteDatabase().deleteAllNotes()
+        } catch (e: Exception) {
+            Log.e("delete notes: ", e.toString())
+        }
+    }
+
+    fun searchNoteByDateCreate(selectDay: Long, nextDay: Long): List<Notes> {
         return try {
             notesDatabase.noteDatabase().getNotesByDate(selectDay, nextDay)
-        }catch (e: Exception){
+        } catch (e: Exception) {
             emptyList()
         }
+    }
+
+    fun upDateNoteByNote(note: Notes) {
+        try {
+            notesDatabase.noteDatabase().updateNote(note)
+        } catch (e: Exception) {
+            Log.e("update notes: ", e.toString())
+        }
+
     }
 }

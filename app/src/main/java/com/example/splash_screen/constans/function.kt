@@ -2,7 +2,6 @@ package com.example.splash_screen.constans
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import java.io.ByteArrayOutputStream
 import java.util.Calendar
 
 fun showTimeToNewNote(time: Long): String {

@@ -1,9 +1,7 @@
 package com.example.splash_screen.View.calander
 
 
-import android.icu.text.SimpleDateFormat
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Note
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -15,12 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.applandeo.materialcalendarview.CalendarDay
 import com.applandeo.materialcalendarview.CalendarView
 import com.applandeo.materialcalendarview.listeners.OnCalendarDayClickListener
-import com.example.splash_screen.Model.Notes.Notes
+import com.example.splash_screen.model.Notes.Notes
 import com.example.splash_screen.R
 import com.example.splash_screen.View.calander.adapter.AdapterCalender
 import com.example.splash_screen.ViewModel.NoteViewModel
-import com.example.splash_screen.constans.convertToStartOfDay
-import com.example.splash_screen.constans.showTimeToNewNote
 import java.util.Calendar
 
 
