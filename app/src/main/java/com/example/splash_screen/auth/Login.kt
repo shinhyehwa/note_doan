@@ -66,8 +66,6 @@ class Login : AppCompatActivity() {
             .build()
         googleSignClient = GoogleSignIn.getClient(this,gos)
         listener()
-
-
     }
 
     private fun listener(){

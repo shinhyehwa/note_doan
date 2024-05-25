@@ -4,11 +4,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.splash_screen.View.calander.FragmentCalender
-import com.example.splash_screen.View.FragmentCheckList
+import com.example.splash_screen.View.Todos.FragmentCheckList
 import com.example.splash_screen.View.ScreenNote.FragmentNotes
 import com.example.splash_screen.View.screen_account.FragmentAccount
 import com.example.splash_screen.View.screen_account.NoLoginFragment
-import com.example.splash_screen.constans.const
+import com.example.splash_screen.constans.Constant
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
@@ -26,7 +26,7 @@ class Main : AppCompatActivity() {
             when (it.itemId) {
                 R.id.notes -> {
                     changeScreen(FragmentNotes())
-                    const.selectedIndex= R.id.notes
+                    Constant.selectedIndex= R.id.notes
                 }
                 R.id.checklist -> changeScreen(FragmentCheckList())
                 R.id.calendar -> changeScreen(FragmentCalender())
@@ -36,12 +36,12 @@ class Main : AppCompatActivity() {
                     } else {
                         changeScreen(NoLoginFragment())
                     }
-                    const.selectedIndex= R.id.account
+                    Constant.selectedIndex= R.id.account
                 }
             }
             true
         }
-        bottomNavi.selectedItemId= const.selectedIndex
+        bottomNavi.selectedItemId= Constant.selectedIndex
 
     }
 

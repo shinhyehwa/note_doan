@@ -1,12 +1,12 @@
-package com.example.splash_screen.Model.Notes
+package com.example.splash_screen.model.Notes
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.splash_screen.constans.const
+import com.example.splash_screen.constans.Constant
 
-@Database(entities = [Notes::class], version = 1, exportSchema = false)
+@Database(entities = [Notes::class], version = 2, exportSchema = false)
 abstract class NotesDatabase : RoomDatabase() {
     abstract fun noteDatabase(): DaoNotes
 
@@ -19,7 +19,7 @@ abstract class NotesDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     NotesDatabase::class.java,
-                    const.NAME_DATABASE
+                    Constant.NAME_DATABASE
                 ).fallbackToDestructiveMigration()
                     .allowMainThreadQueries()
                     .build()

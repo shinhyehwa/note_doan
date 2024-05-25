@@ -1,6 +1,5 @@
 package com.example.splash_screen.auth
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -18,6 +17,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthException
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class Register : AppCompatActivity() {
@@ -127,6 +127,7 @@ class Register : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
+                        FirebaseFirestore.getInstance().collection(auth.uid.toString()).get()
                         btnRegister.isEnabled = true
                         Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
                         val intent = Intent(this, Main::class.java)

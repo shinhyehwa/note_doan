@@ -1,8 +1,7 @@
-package com.example.splash_screen.Model.Notes
+package com.example.splash_screen.model.Notes
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.time.LocalDateTime
 
 @Entity
 data class Notes(
@@ -12,6 +11,9 @@ data class Notes(
     val dateCreate: Long,
     val dateUpdate: Long,
     val color: Int,
+    val font: Int,
+    val pin: Int,
+    val categoryId: Int?,
     val imageByteArray: ByteArray?,
     val audioByteArray: ByteArray?,
 ) {

@@ -108,6 +108,7 @@
                         />
 
                     <ImageButton
+                        android:id="@+id/NewNotes_delete_image"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_margin="8dp"
@@ -162,21 +163,24 @@
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:backgroundTint="@android:color/transparent"
-                android:src="@drawable/makeup_brush_24" />
+                android:src="@drawable/makeup_brush_24"
+                android:contentDescription="@string/todo" />
 
             <ImageButton
                 android:id="@+id/NewNotes_picture"
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:backgroundTint="@android:color/transparent"
-                android:src="@drawable/picture_24" />
+                android:src="@drawable/picture_24"
+                android:contentDescription="@string/todo" />
 
             <ImageButton
                 android:id="@+id/NewNotes_audio"
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:backgroundTint="@android:color/transparent"
-                android:src="@drawable/microphone_24" />
+                android:src="@drawable/microphone_24"
+                android:contentDescription="@string/todo" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

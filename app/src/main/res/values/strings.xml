@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">NoteBook</string>
+    <string name="todos">Todos</string>
+    <string name="myAccount">Tài khoản</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="queryHint">Nội dung ghi chú</string>
@@ -15,4 +17,27 @@
     <string name="validateEmail">email đã tồn tại hoặc sai</string>
     <string name="validatePass">mật khẩu có độ dài 6-16 ký tự và không được gồm 1 số một chữ thường, một chữ hoa và 1 ký tự đặc biệt</string>
     <string name="validateConfirmPass">Mật khẩu không khớp</string>
+    <string name="task_here">task name here…</string>
+    <string name="description">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="description_placeholder">Description: %s</string>
+    <string name="choose_colors">Choose Colors</string>
+    <string name="text_colors">Text Colors</string>
+    <string name="font">Font</string>
+    <string name="todo">TODO</string>
+    <string name="choose_category">choose category</string>
+    <string name="dateCrate">Ngày tạo</string>
+    <string name="finishDate">Ngày hoàn thành</string>
+    <string name="priority">Độ ưu tiên</string>
+    <string name="all">All</string>
+    <string name="new_cate">+</string>
+    <string name="create_category">Create Category</string>
+    <string name="category_name">Category name....</string>
+    <string name="default_web_client_id">124796362401-ovtmn5dpub2kh896biq6qqs82i7pm6oi.apps.googleusercontent.com</string>
+    <string name="create_sync_record">Tạo bản sao lưu</string>
+    <string name="get_data">Đồng bộ dữ liệu</string>
+    <string name="choose_backups">Choose backups</string>
+    <string name="create">Create</string>
+
 </resources>
